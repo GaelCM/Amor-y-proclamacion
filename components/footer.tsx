@@ -1,6 +1,8 @@
 import { Church, Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from "next/image"
+import logo from "@/assets/logo2.png"
 
 export function Footer() {
   return (
@@ -10,14 +12,14 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Church className="h-8 w-8 text-primary" />
+              <Image src={logo} alt="" width={120}></Image>
               <div className="flex flex-col">
-                <span className="font-serif text-lg font-bold text-foreground leading-tight">Iglesia Nacional</span>
-                <span className="font-serif text-sm text-muted-foreground leading-tight">Presbiteriana</span>
+                <span className="font-serif text-lg font-bold text-foreground leading-tight">Iglesia Amor y Proclamación</span>
+                <span className="font-serif text-sm text-muted-foreground leading-tight">Oaxaca</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Una comunidad de fe comprometida con el amor, el servicio y el crecimiento espiritual.
+              Somos una iglesia con una visión integral. Diseñada por Dios para bendecir tu vida.
             </p>
             <div className="flex items-center gap-3">
               <Button
@@ -64,15 +66,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span>Av. Principal 123, Ciudad, País</span>
+                <span>Xicotencatl 806, Oaxaca de Juárez, Mexico</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>951 198 9637</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <span>info@iglesianacional.org</span>
+                <span>iglesiaamoryproclamacion@hotmail.com</span>
               </li>
             </ul>
           </div>

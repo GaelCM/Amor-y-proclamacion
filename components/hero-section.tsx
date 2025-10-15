@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Heart, BookOpen, Users } from "lucide-react"
-import foto from "@/assets/bannerPrincipal.jpg"
+import foto from "@/assets/banner3.jpg"
 
 export function HeroSection() {
   return (
@@ -65,8 +65,7 @@ export function HeroSection() {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-in-up leading-relaxed drop-shadow-sm"
             style={{ animationDelay: "0.2s" }}
           >
-            Un lugar donde la fe se encuentra con la comunidad. Únete a nosotros en nuestro camino de crecimiento
-            espiritual, servicio y amor.
+            Somos una iglesia con una visión integral. Diseñada por Dios para bendecir tu vida.
           </p>
 
    
@@ -74,17 +73,15 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
-            <Button size="lg" className="text-base px-8 group shadow-lg hover:shadow-xl transition-all">
-              Visítanos
+            <a href="#cursos" className="flex items-center text-base text-white px-8 py-2 rounded-xl bg-primary backdrop-blur-sm hover:bg-primary/70 shadow-md">
+              Descubrenos
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base px-8 bg-white/50 backdrop-blur-sm hover:bg-white/80 shadow-md"
+            </a>
+            <a href="#acercaDe"
+              className="text-base px-5 py-2 rounded-xl bg-white/50 backdrop-blur-sm hover:bg-white/80 shadow-md"
             >
-              Conoce Más
-            </Button>
+              Conoce Más de Dios
+            </a>
           </div>
 
           <div

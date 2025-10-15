@@ -7,6 +7,9 @@ import { Camera, Heart, Users, Music, BookOpen, Sparkles } from "lucide-react"
 import foto from "@/assets/bannerPrincipal.jpg"
 import foto1 from "@/assets/jovenes.jpg"
 import foto2 from "@/assets/estudio.jpg"
+import foto3 from "@/assets/bautismo.jpg"
+import foto4 from "@/assets/conferencia.jpg"
+import foto5 from "@/assets/oracion.jpg"
 
 const galleryItems = [
   {
@@ -28,21 +31,21 @@ const galleryItems = [
     icon: BookOpen,
   },
   {
-    title: "Servicio Comunitario",
+    title: "Eventos",
     category: "Servicio",
-    image: "/community-service-volunteers-helping.jpg",
+    image: foto5.src,
     icon: Heart,
   },
   {
-    title: "Bautismos",
+    title: "Oracion y Alabanza",
     category: "Celebraciones",
-    image: "/baptism-ceremony-in-church.jpg",
+    image: foto3.src,
     icon: Sparkles,
   },
   {
     title: "Conferencia Anual",
     category: "Eventos",
-    image: "/church-conference-with-speaker.jpg",
+    image: foto4.src,
     icon: Users,
   },
 ]

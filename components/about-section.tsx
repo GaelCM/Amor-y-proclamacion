@@ -8,7 +8,7 @@ import a3 from "@/assets/a3.jpg"
 
 export function AboutSection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" id="acercaDe">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Stack Column */}
@@ -17,12 +17,13 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative h-[420px] sm:h-[480px] md:h-[520px] lg:h-[600px] overflow-hidden"
+            className="w-full flex justify-center lg:block lg:w-auto"
         >
+          <div className="relative h-[420px] sm:h-[480px] md:h-[520px] lg:h-[600px] overflow-hidden w-[320px] sm:w-[420px] md:w-[520px] lg:w-auto mx-auto lg:mx-0">
             {/* Background decorative element */}
             <div className="absolute -top-6 -left-6 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-
-            {/* Image 1 */}
+            
+            {/* Imagen 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +39,7 @@ export function AboutSection() {
               />
             </motion.div>
 
-            {/* Image 2  */}
+            {/* Imagen 2  */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +50,7 @@ export function AboutSection() {
               <Image src={a2} alt="Servicio de adoración" fill className="object-cover" />
             </motion.div>
 
-            {/* Image 3 */}
+            {/* Imagen 3 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -59,11 +60,9 @@ export function AboutSection() {
             >
               <Image src={a3} alt="Grupo de oración" fill className="object-cover" />
             </motion.div>
-
-           
+          </div>
         </motion.div>
 
-          {/* Content Column */}
         <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
