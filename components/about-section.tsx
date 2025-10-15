@@ -22,7 +22,7 @@ export function AboutSection() {
             {/* Background decorative element */}
             <div className="absolute -top-6 -left-6 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
 
-            {/* Image 1 - Back */}
+            {/* Image 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export function AboutSection() {
               />
             </motion.div>
 
-            {/* Image 2 - Middle */}
+            {/* Image 2  */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export function AboutSection() {
               <Image src={a2} alt="Servicio de adoración" fill className="object-cover" />
             </motion.div>
 
-            {/* Image 3 - Front */}
+            {/* Image 3 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

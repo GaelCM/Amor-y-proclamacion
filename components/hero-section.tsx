@@ -14,7 +14,7 @@ export function HeroSection() {
             backgroundImage: `url(${foto.src})`,
           }}
         />
-        {/* Reduce the white overlay opacity so the background photo is visible */}
+   
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-primary/20 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       </div>
@@ -45,13 +45,13 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Badge */}
+         
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 backdrop-blur-sm text-primary text-lg font-medium mb-8 animate-fade-in-up border border-primary/20">
             <Heart className="h-4 w-4 animate-pulse-slow" />
             <span>Bienvenidos a nuestra comunidad de fe</span>
           </div>
 
-          {/* Main Heading */}
+        
           <h1
             className="font-serif text-5xl md:text-7xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-up text-balance drop-shadow-sm"
             style={{ animationDelay: "0.1s" }}
@@ -61,7 +61,6 @@ export function HeroSection() {
             <span className="text-primary animate-gradient">Amor y Proclamación</span>
           </h1>
 
-          {/* Subtitle */}
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-in-up leading-relaxed drop-shadow-sm"
             style={{ animationDelay: "0.2s" }}
@@ -70,7 +69,7 @@ export function HeroSection() {
             espiritual, servicio y amor.
           </p>
 
-          {/* CTA Buttons */}
+   
           <div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
@@ -88,7 +87,6 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats */}
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.4s" }}

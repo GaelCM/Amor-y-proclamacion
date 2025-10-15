@@ -4,57 +4,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Clock, Bell } from "lucide-react"
-import Image from "next/image"
-import a1 from "@/assets/a1.jpg"
-import a2 from "@/assets/a2.jpg"
-import a3 from "@/assets/a3.jpg"
+import { Aviso } from "@/types/avisos"
 
-const announcements = [
-  {
-    title: "Culto Especial de Acción de Gracias",
-    description:
-      "Únete a nosotros para un servicio especial de gratitud y alabanza. Habrá testimonios, música especial y un mensaje inspirador.",
-    date: "15 de Noviembre, 2024",
-    time: "10:00 AM",
-    location: "Santuario Principal",
-    type: "Evento Especial",
-    color: "bg-primary text-primary-foreground",
-    image: a3
-  },
-  {
-    title: "Retiro de Jóvenes 2024",
-    description:
-      "Tres días de adoración, enseñanza y compañerismo en las montañas. Inscripciones abiertas hasta el 30 de octubre.",
-    date: "1-3 de Diciembre, 2024",
-    time: "Todo el día",
-    location: "Centro de Retiros El Refugio",
-    type: "Retiro",
-    color: "bg-primary text-primary-foreground",
-    image: a3,
-  },
-  {
-    title: "Campaña de Ayuda Comunitaria",
-    description: "Recolección de alimentos y ropa para familias necesitadas. Tu generosidad marca la diferencia.",
-    date: "Todo Noviembre",
-    time: "Horario de oficina",
-    location: "Oficina de la Iglesia",
-    type: "Servicio",
-    color: "bg-primary text-primary-foreground",
-  },
-  {
-    title: "Concierto de Navidad",
-    description:
-      "Nuestro coro y orquesta presentan un hermoso programa navideño. Entrada gratuita, todos son bienvenidos.",
-    date: "20 de Diciembre, 2024",
-    time: "7:00 PM",
-    location: "Santuario Principal",
-    type: "Concierto",
-    color: "bg-accent text-accent-foreground",
-    image: a3,
-  },
-]
 
-export function AnnouncementsSection() {
+  async function getCursos() {
+  const res = await fetch("https://script.google.com/macros/s/AKfycbxKnY8_5dGBYIUoIlsVra4M-Y7cd-1dck9kTMK4VUEdIi0e3V0XyRT-_saE_DQoWqnvNQ/exec", {
+    cache: "no-store", // o "force-cache" si quieres que se guarde en build
+  });
+  return res.json();
+  }
+
+export default async function AnnouncementsSection() {
+    const courses:Aviso[]=await getCursos();
+    // 🔹 Toma los últimos 4 elementos del arreglo
+    const last4 = courses.slice(-4);
+
   return (
     <section id="avisos" className="py-24 bg-gradient-to-b from-white to-secondary/20 relative overflow-hidden">
       {/* Background Decoration */}
@@ -78,7 +42,7 @@ export function AnnouncementsSection() {
 
         {/* Announcements Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-8xl mx-auto">
-          {announcements.map((announcement, index) => (
+          {last4.map((announcement, index) => (
             <Card
               key={index}
               className="group hover:shadow-2xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-card overflow-hidden"
@@ -89,13 +53,12 @@ export function AnnouncementsSection() {
               <div className="flex flex-col lg:flex-row items-stretch">
                 {/* Image column */}
                 <div className="w-full lg:w-84 flex-shrink-0 bg-muted/5">
-                  {announcement.image ? (
+                  {announcement.imagen ? (
                     <div className="w-full h-58 lg:h-full relative">
-                      <Image
-                        src={announcement.image}
-                        alt={announcement.title}
-                        fill
-                        className="object-cover"
+                      <img
+                        src={announcement.imagen}
+                        alt={announcement.titulo}
+                        className="object-contain w-full h-full"
                         sizes="(max-width: 1024px) 100vw, 176px"
                       />
                     </div>
@@ -109,13 +72,13 @@ export function AnnouncementsSection() {
                   <div>
                     <CardHeader className="p-0">
                       <div className="flex items-start justify-between mb-3">
-                        <Badge className={announcement.color}>{announcement.type}</Badge>
+                        <Badge className={announcement.color}>{announcement.tipoEvento}</Badge>
                       </div>
                       <CardTitle className="text-2xl font-serif text-foreground group-hover:text-primary transition-colors">
-                        {announcement.title}
+                        {announcement.titulo}
                       </CardTitle>
                       <CardDescription className="text-muted-foreground leading-relaxed text-base">
-                        {announcement.description}
+                        {announcement.descripcion}
                       </CardDescription>
                     </CardHeader>
 
@@ -125,19 +88,19 @@ export function AnnouncementsSection() {
                           <div className="p-2 rounded-lg bg-primary/10">
                             <Calendar className="h-4 w-4 text-primary" />
                           </div>
-                          <span className="font-medium">{announcement.date}</span>
+                          <span className="font-medium">{announcement.fecha}</span>
                         </div>
                         <div className="flex items-center gap-3 text-sm text-foreground">
                           <div className="p-2 rounded-lg bg-accent/10">
                             <Clock className="h-4 w-4 text-accent" />
                           </div>
-                          <span className="font-medium">{announcement.time}</span>
+                          <span className="font-medium">{announcement.hora}</span>
                         </div>
                         <div className="flex items-center gap-3 text-sm text-foreground">
                           <div className="p-2 rounded-lg bg-primary/10">
                             <MapPin className="h-4 w-4 text-primary" />
                           </div>
-                          <span className="font-medium">{announcement.location}</span>
+                          <span className="font-medium">{announcement.lugar}</span>
                         </div>
                       </div>
                     </CardContent>

@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Camera, Heart, Users, Music, BookOpen, Sparkles } from "lucide-react"
 import foto from "@/assets/bannerPrincipal.jpg"
+import foto1 from "@/assets/jovenes.jpg"
+import foto2 from "@/assets/estudio.jpg"
 
 const galleryItems = [
   {
@@ -16,13 +18,13 @@ const galleryItems = [
   {
     title: "Retiro de Jóvenes",
     category: "Eventos",
-    image: "/youth-group-retreat-outdoor-activities.jpg",
+    image: foto1.src,
     icon: Users,
   },
   {
     title: "Estudio Bíblico",
     category: "Educación",
-    image: "/bible-study-group-discussion.jpg",
+    image: foto2.src,
     icon: BookOpen,
   },
   {
