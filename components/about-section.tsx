@@ -35,7 +35,7 @@ export function AboutSection() {
                 src={a1}
                 alt="Comunidad de la iglesia reunida"
                 fill
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 176px"         
               />
             </motion.div>
 
@@ -47,7 +47,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="absolute top-12 left-12 sm:left-16 md:left-20 w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-3 z-20"
             >
-              <Image src={a2} alt="Servicio de adoración" fill className="object-cover" />
+              <Image src={a2} alt="Servicio de adoración" fill  sizes="(max-width: 1024px) 100vw, 176px" />
             </motion.div>
 
             {/* Imagen 3 */}
@@ -58,7 +58,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="absolute top-20 left-24 sm:left-28 md:left-32 lg:left-40 w-58 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform -rotate-3 z-30 hover:scale-105 transition-transform duration-300"
             >
-              <Image src={a3} alt="Grupo de oración" fill className="object-cover" />
+              <Image src={a3} alt="Grupo de oración" fill sizes="(max-width: 1024px) 100vw, 176px" />
             </motion.div>
           </div>
         </motion.div>

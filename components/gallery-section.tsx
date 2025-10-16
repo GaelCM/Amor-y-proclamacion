@@ -4,12 +4,13 @@ import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Camera, Heart, Users, Music, BookOpen, Sparkles } from "lucide-react"
-import foto from "@/assets/bannerPrincipal.jpg"
+import foto from "@/assets/banner3.jpg"
 import foto1 from "@/assets/jovenes.jpg"
 import foto2 from "@/assets/estudio.jpg"
 import foto3 from "@/assets/bautismo.jpg"
 import foto4 from "@/assets/conferencia.jpg"
 import foto5 from "@/assets/oracion.jpg"
+import Image from "next/image"
 
 const galleryItems = [
   {
@@ -103,10 +104,12 @@ export function GallerySection() {
                 className="group relative overflow-hidden border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <img
+                  <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 176px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

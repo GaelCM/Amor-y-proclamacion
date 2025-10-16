@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Heart, BookOpen, Users } from "lucide-react"
-import foto from "@/assets/banner3.jpg"
+import foto from "@/assets/banner3final.webp"
 
 export function HeroSection() {
   return (

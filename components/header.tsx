@@ -41,7 +41,7 @@ export function Header() {
             {/* Mobile centered logo */}
             <div className="block sm:hidden w-full">
               <div className="flex items-center justify-center">
-                <Image src={logoFinal} alt="Logo" width={120} height={48} className="object-contain ml-30" />
+                <Image src={logoFinal} alt="Logo" width={120} className="object-contain ml-30" />
               </div>
             </div>
 

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Clock, Bell } from "lucide-react"
 import { Aviso } from "@/types/avisos"
+import Image from "next/image"
 
 
   async function getCursos() {
@@ -55,10 +56,11 @@ export default async function AnnouncementsSection() {
                 <div className="w-full lg:w-84 flex-shrink-0 bg-muted/5">
                   {announcement.imagen ? (
                     <div className="w-full h-58 lg:h-full relative">
-                      <img
+                      <Image
                         src={announcement.imagen}
                         alt={announcement.titulo}
-                        className="object-contain w-full h-full"
+                        className="object-contain"
+                        fill
                         sizes="(max-width: 1024px) 100vw, 176px"
                       />
                     </div>
